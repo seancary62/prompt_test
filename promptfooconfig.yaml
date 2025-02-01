@@ -1,0 +1,22 @@
+# Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
+description: "Our Third Prompt Test"
+
+prompts:
+  - "Answer the following question: {{question}}"
+  - "Answer the following question. This is very important to my career!: {{question}}"
+  - "You are an expert Astronomer. Answer the following question: {{question}}"
+  - "Answer the following question. Let's think step-by-step: {{question}}"
+  
+defaultTest:
+ options:
+  provider: openai:gpt-4o-mini
+
+providers:
+  - id: "openai:gpt-4o-mini"
+    config:
+      temperature: 1.0
+      max_tokens: 1000
+      apiKeyEnvar: OPENAI_API_KEY
+      
+
+tests: https://docs.google.com/spreadsheets/d/1sakFpeStGwuS0smwUGleA6gavlO1285kBPLmoiUq1aQ/edit?usp=sharing

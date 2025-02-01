@@ -1,0 +1,21 @@
+# Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
+description: "Our First Prompt Test"
+
+prompts:
+  - "Answer the following question: {{question}}"
+  - "Answer the following question. I'll tip you $20 for a correct answer: {{question}}"
+  - "Answer the following question. I'll tip you $200 for a correct answer: {{question}}"
+  - "Answer the following question. I won't tip you no matter what: {{question}}"
+  
+
+providers:
+  - id: "openai:gpt-4o-mini"
+    config:
+      temperature: 1.0
+      max_tokens: 1000
+      apiKeyEnvar: OPENAI_API_KEY
+      
+
+tests:
+  - vars:
+      question: What is true for a type-Ia ("type one-a") supernova? (A) This type occurs in binary systems. (B) This type occurs in young galaxies. (C) This type produces gamma-ray bursts. (D) This type produces high amounts of X-rays.
